@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Carl Anthony Carranza — QA Engineer and AI Video Editor focused on manual testing, Playwright automation, UAT, API testing, AI-assisted workflows, and AI video editing." />
+  <title>Carl Anthony Carranza | QA Engineer + AI Video Editor</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+:root{
+  --bg:#071019;
+  --bg-2:#0a141f;
+  --panel:#0d1925;
+  --panel-2:#101e2b;
+  --line:rgba(165,192,211,.13);
+  --line-strong:rgba(165,192,211,.22);
+  --text:#edf6fb;
+  --muted:#8ea0af;
+  --muted-2:#6f8190;
+  --green:#62f0c2;
+  --green-2:#2bc39d;
+  --blue:#79a8ff;
+  --danger:#ff718c;
+  --warn:#ffc86a;
+  --shadow:0 26px 80px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}.container{width:min(1160px,calc(100% - 42px));margin:auto}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);background-size:40px 40px;mask-image:linear-gradient(to bottom,black,transparent 85%);z-index:-2}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 20% 10%,rgba(98,240,194,.08),transparent 28%),radial-gradient(circle at 85% 18%,rgba(121,168,255,.07),transparent 26%);z-index:-3}
+.top-scan{height:2px;background:linear-gradient(90deg,transparent,var(--green),transparent);box-shadow:0 0 22px rgba(98,240,194,.55)}
+.site-header{position:sticky;top:0;z-index:20;backdrop-filter:blur(18px);background:rgba(7,16,25,.82);border-bottom:1px solid var(--line)}
+.nav-wrap{height:72px;display:flex;align-items:center;gap:25px}.brand{display:flex;align-items:center;gap:11px;margin-right:auto}.brand-mark{width:40px;height:40px;display:grid;place-items:center;border:1px solid rgba(98,240,194,.35);border-radius:10px;background:#0a171f;color:var(--green);font:700 .78rem "JetBrains Mono",monospace;box-shadow:inset 0 0 22px rgba(98,240,194,.06)}.brand-copy{display:flex;flex-direction:column;line-height:1}.brand-copy strong{font-size:.78rem;letter-spacing:.08em}.brand-copy small{margin-top:5px;color:var(--muted-2);font:600 .58rem "JetBrains Mono",monospace;letter-spacing:.08em}.nav{display:flex;gap:27px;align-items:center}.nav a{color:#9fb0bf;font-size:.86rem;transition:.2s}.nav a:hover{color:var(--green)}.nav-status,.dash-live{display:flex;align-items:center;gap:8px;color:#9fb0bf;font:600 .68rem "JetBrains Mono",monospace;letter-spacing:.08em}.status-dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 11px rgba(98,240,194,.8)}.menu-btn{display:none;border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:10px;padding:8px 10px;font-size:1rem}
+.hero{position:relative;padding:76px 0 0;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1fr 1.02fr;gap:58px;align-items:center;min-height:665px;position:relative;z-index:1}.hero-grid-lines{position:absolute;inset:0;opacity:.35;background-image:linear-gradient(90deg,transparent 0,transparent calc(50% - 580px),rgba(98,240,194,.08) calc(50% - 580px),rgba(98,240,194,.08) calc(50% - 579px),transparent calc(50% - 579px),transparent calc(50% + 390px),rgba(121,168,255,.08) calc(50% + 390px),rgba(121,168,255,.08) calc(50% + 391px),transparent calc(50% + 391px));pointer-events:none}
+.eyebrow,.mono-kicker,.section-kicker,.project-label,.project-index,.tool-state,.terminal-label{font-family:"JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.13em}.eyebrow{display:flex;align-items:center;gap:9px;color:var(--green);font-size:.72rem;margin-bottom:19px}.pulse{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 16px var(--green)}.terminal-label{color:var(--muted-2);font-size:.68rem;margin:0 0 12px}.hero-copy h1{font-size:clamp(3.5rem,7.2vw,6.5rem);line-height:.92;letter-spacing:-.065em;margin:0 0 25px}.hero-copy h1 span{color:var(--green)}.hero-lede{font-size:1.03rem;color:#b7c6d2;max-width:675px;margin:0}.hero-actions{display:flex;gap:11px;flex-wrap:wrap;margin:29px 0 21px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 17px;border:1px solid var(--line-strong);border-radius:11px;font-weight:700;font-size:.9rem;transition:.2s ease}.btn:hover{transform:translateY(-2px);border-color:rgba(98,240,194,.35)}.btn-primary{background:var(--green);color:#061017;border-color:var(--green);box-shadow:0 12px 34px rgba(98,240,194,.12)}.btn-ghost{background:rgba(255,255,255,.025)}.hero-meta{display:flex;gap:8px;flex-wrap:wrap}.hero-meta span{border:1px solid var(--line);border-radius:7px;padding:6px 9px;color:#8fa4b6;font:600 .63rem "JetBrains Mono",monospace;background:rgba(255,255,255,.018)}
+.qa-dashboard{position:relative;border:1px solid var(--line-strong);border-radius:20px;background:linear-gradient(145deg,rgba(15,29,43,.98),rgba(7,15,24,.98));box-shadow:var(--shadow);overflow:hidden}.qa-dashboard:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(98,240,194,.05),transparent 30%);pointer-events:none}.dash-topbar{height:47px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;padding:0 15px;color:#7990a1;font:600 .68rem "JetBrains Mono",monospace}.terminal-controls{display:flex;gap:5px}.terminal-controls i{width:7px;height:7px;border-radius:50%;background:#566675}.dash-path span{color:#445361;margin:0 5px}.dash-live{margin-left:auto;color:var(--green)}.dash-body{padding:22px}.suite-head{display:flex;justify-content:space-between;gap:16px;align-items:start}.mono-kicker,.section-kicker{font-size:.68rem;color:var(--green);margin:0 0 7px}.suite-head h2{font-size:1.55rem;margin:0;letter-spacing:-.03em}.run-badge{padding:7px 9px;border:1px solid rgba(98,240,194,.2);border-radius:7px;color:#94a9b7;background:rgba(98,240,194,.04);font:600 .62rem "JetBrains Mono",monospace;text-transform:uppercase}.run-badge span{color:var(--green)}.test-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:21px 0}.summary-card{padding:12px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.018)}.summary-card span{display:block;color:var(--muted-2);font:600 .62rem "JetBrains Mono",monospace}.summary-card strong{display:block;margin:2px 0;font-size:.82rem}.summary-card small{display:block;color:#687d8d;font-size:.62rem}.pipeline{padding:15px 0 0;border-top:1px solid var(--line)}.pipeline-label{display:flex;justify-content:space-between;color:#6e8290;font:600 .61rem "JetBrains Mono",monospace;text-transform:uppercase}.pipeline-track{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin-top:11px}.pipe-step{position:relative;padding:10px 8px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.015)}.pipe-step.active{border-color:rgba(98,240,194,.2)}.pipe-step b{display:block;font:700 .62rem "JetBrains Mono",monospace;color:var(--green);margin-bottom:5px}.pipe-step span{font-size:.66rem;color:#8ba0ae}.console{margin-top:16px;border:1px solid var(--line);border-radius:11px;overflow:hidden;background:#061019}.console-head,.console-foot{display:flex;justify-content:space-between;align-items:center;padding:9px 12px;border-bottom:1px solid var(--line);font:600 .59rem "JetBrains Mono",monospace;color:#738797}.console-foot{border-top:1px solid var(--line);border-bottom:0}.console-foot span:first-child{color:var(--green)}.console pre{margin:0;padding:14px 14px 10px;overflow:auto;color:#9db0bc;font:500 .72rem/1.8 "JetBrains Mono",monospace}.dim{color:#78a4c5}.str{color:#91d9ae}.bracket{color:#d9e6ef}.dash-footer{border-top:1px solid var(--line);padding:11px 17px;display:flex;gap:17px;flex-wrap:wrap;color:#738797;font:600 .62rem "JetBrains Mono",monospace}.dash-footer span{display:flex;align-items:center;gap:6px}.check{width:7px;height:7px;border-radius:2px;background:var(--green);box-shadow:0 0 8px rgba(98,240,194,.35)}
+.qa-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#08131d}.strip-grid{display:grid;grid-template-columns:1.15fr repeat(4,1fr)}.strip-title,.scope-cell{padding:19px 18px;border-right:1px solid var(--line);min-height:75px}.scope-cell:last-child{border-right:0}.strip-title strong{display:block;font-size:.92rem;margin-top:3px}.scope-cell{display:flex;gap:11px;align-items:center}.scope-icon{display:grid;place-items:center;width:29px;height:29px;border:1px solid rgba(98,240,194,.22);border-radius:7px;color:var(--green);font:600 .62rem "JetBrains Mono",monospace}.scope-cell b{display:block;font-size:.76rem}.scope-cell small{display:block;color:var(--muted-2);font-size:.62rem;margin-top:2px}
+.section{padding:104px 0}.section-dark{background:#08131d;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.two-col,.section-heading,.credentials-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px}.section h2{font-size:clamp(2.3rem,4.3vw,3.8rem);line-height:1.03;letter-spacing:-.045em;margin:0}.section-body{font-size:1rem;color:#b7c5d1}.mini-callout{margin-top:26px;padding:17px 19px;border:1px solid rgba(98,240,194,.18);border-radius:13px;background:rgba(98,240,194,.035)}.mini-callout span{display:block;color:var(--green);font:600 .65rem "JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.09em;margin-bottom:5px}.mini-callout b{font-weight:600;color:#e9f5f5}
+
+.ai-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.ai-card{padding:23px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.018);position:relative;overflow:hidden}.ai-card:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(98,240,194,.045),transparent 48%);pointer-events:none}.ai-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.ai-code{display:grid;place-items:center;width:40px;height:40px;border:1px solid rgba(121,168,255,.25);border-radius:10px;color:var(--blue);font:700 .66rem "JetBrains Mono",monospace;background:#09151e}.ai-use{color:var(--green);font:600 .59rem "JetBrains Mono",monospace;letter-spacing:.11em}.ai-card h3{margin:17px 0 6px;font-size:1.15rem}.ai-card p{margin:0;color:var(--muted);font-size:.86rem}.ai-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}.ai-tags span{padding:5px 8px;border:1px solid var(--line);border-radius:7px;color:#a9bbc7;font:600 .61rem "JetBrains Mono",monospace;background:rgba(255,255,255,.018)}.ai-note{margin-top:16px;padding:15px 17px;border:1px dashed var(--line-strong);border-radius:11px;background:rgba(121,168,255,.025);color:#8da2b0;font-size:.74rem}.ai-note strong{color:#d7e4ec}.ai-flow{display:grid;grid-template-columns:repeat(4,1fr);margin-top:16px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.ai-step{padding:18px;border-right:1px solid var(--line)}.ai-step:last-child{border-right:0}.ai-step>span{color:var(--green);font:700 .61rem "JetBrains Mono",monospace}.ai-step h4{margin:10px 0 5px;font-size:.82rem}.ai-step p{margin:0;color:var(--muted-2);font-size:.68rem;line-height:1.55}
+.section-heading{align-items:end;margin-bottom:36px}.section-heading>p{color:var(--muted);max-width:470px;margin:0 0 2px}.stack-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.stack-card{padding:23px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.018)}.stack-featured{background:linear-gradient(145deg,rgba(98,240,194,.065),rgba(121,168,255,.035));border-color:rgba(98,240,194,.18)}.stack-top,.project-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.tool-code{display:grid;place-items:center;width:40px;height:40px;border:1px solid rgba(98,240,194,.25);border-radius:10px;color:var(--green);font:700 .7rem "JetBrains Mono",monospace;background:#09151e}.tool-state{font-size:.59rem;color:#718797}.stack-card h3{margin:17px 0 5px;font-size:1.2rem}.stack-card p{margin:0 0 14px;color:var(--muted);font-size:.88rem}.chips,.project-tags{display:flex;gap:7px;flex-wrap:wrap}.chips span,.project-tags span{padding:5px 8px;border:1px solid var(--line);border-radius:7px;color:#a9bbc7;font:600 .62rem "JetBrains Mono",monospace;background:rgba(255,255,255,.018)}.project-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.project-actions .btn{padding:9px 12px;font-size:.74rem}.tool-wall{display:grid;grid-template-columns:repeat(8,1fr);gap:8px;margin-top:15px}.tool-wall>div{padding:10px;border:1px solid var(--line);border-radius:9px;color:#8296a5;font:600 .62rem "JetBrains Mono",monospace;text-align:center;background:rgba(255,255,255,.012)}.tool-dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--green);margin-right:6px;vertical-align:middle}
+.timeline{border-top:1px solid var(--line)}.timeline-item{position:relative;display:grid;grid-template-columns:175px 1fr;gap:25px;padding:27px 0;border-bottom:1px solid var(--line)}.timeline-date{font:600 .66rem "JetBrains Mono",monospace;color:var(--green);padding-top:3px}.role-line{display:flex;justify-content:space-between;gap:12px;align-items:baseline}.role-line h3{margin:0;font-size:1.18rem}.role-line span{color:#5f7483;font:600 .6rem "JetBrains Mono",monospace}.muted{color:var(--muted);margin:4px 0 0}.evidence{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}.evidence span{padding:4px 7px;border:1px solid rgba(98,240,194,.14);border-radius:6px;color:#89a9a0;background:rgba(98,240,194,.025);font:600 .58rem "JetBrains Mono",monospace}.timeline ul{margin:12px 0 0;padding:0 !important;color:#aebdca;list-style:none !important}.timeline li{position:relative;padding-left:30px;line-height:1.65;list-style:none !important}.timeline li::before{content:"✓";position:absolute;left:0;top:.2em;width:17px;height:17px;display:grid;place-items:center;border:1px solid rgba(98,240,194,.38);border-radius:5px;color:var(--green);background:rgba(98,240,194,.06);font:700 .62rem/1 "JetBrains Mono",monospace;box-sizing:border-box}.timeline li+li{margin-top:9px}
+.project-grid{display:grid;grid-template-columns:1.13fr .87fr;gap:15px}.project-card{border:1px solid var(--line);border-radius:15px;padding:22px;background:rgba(255,255,255,.018)}.project-featured{grid-row:span 2;background:linear-gradient(145deg,rgba(98,240,194,.06),rgba(255,255,255,.012))}.project-label,.project-index{font-size:.61rem}.project-label{color:var(--green)}.project-index{color:#5f7483}.project-card h3{font-size:1.45rem;margin:17px 0 6px;letter-spacing:-.03em}.project-summary{color:#a9bac6;margin:0 0 16px;font-size:.88rem}.test-matrix{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:15px 0}.test-matrix div{padding:10px;border:1px solid var(--line);border-radius:9px;background:rgba(0,0,0,.11)}.test-matrix span{display:block;color:#637786;font:600 .57rem "JetBrains Mono",monospace}.test-matrix b{display:block;margin-top:3px;color:#c9d7e0;font-size:.72rem}.test-row{display:flex;justify-content:space-between;gap:15px;align-items:center;padding:9px 0;border-top:1px dashed rgba(165,192,211,.11);font-size:.73rem}.test-state{color:var(--green);font:600 .58rem "JetBrains Mono",monospace}.test-row b{font-weight:600;color:#bdccd5;text-align:right}.code-toggle{border:1px solid var(--line-strong);background:transparent;color:#c5d3dd;padding:8px 10px;border-radius:8px;font:600 .62rem "JetBrains Mono",monospace;cursor:pointer;margin-top:14px}.code-panel{max-height:0;overflow:hidden;opacity:0;transition:max-height .3s ease,opacity .25s ease;margin:0}.code-panel.open{max-height:370px;opacity:1;margin-top:12px}.code-panel code{display:block;padding:13px;background:#061018;border:1px solid var(--line);border-radius:9px;white-space:pre-wrap;font:500 .68rem/1.75 "JetBrains Mono",monospace;color:#9eb1bd}.kw{color:#8ab4ff}.str{color:#93d8ac}.num{color:#ffd07f}.bool{color:#e1a1ff}.artifact-board{margin-top:15px;border:1px solid var(--line);border-radius:14px;background:#07111a;overflow:hidden}.artifact-head{padding:12px 14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;color:#637786;font:600 .61rem "JetBrains Mono",monospace}.artifact-grid{display:grid;grid-template-columns:repeat(4,1fr)}.artifact{display:flex;gap:10px;align-items:flex-start;padding:15px;border-right:1px solid var(--line)}.artifact:last-child{border-right:0}.artifact-icon{display:grid;place-items:center;width:27px;height:27px;border:1px solid rgba(98,240,194,.18);border-radius:7px;color:var(--green);font:700 .68rem "JetBrains Mono",monospace}.artifact b{display:block;font-size:.72rem}.artifact small{display:block;color:#657a89;font-size:.6rem;margin-top:3px;line-height:1.45}.project-note{margin:13px 0 0;padding:13px 15px;border:1px dashed var(--line-strong);border-radius:10px;display:flex;gap:9px;color:#748997;font-size:.74rem}.project-note span{color:var(--green)}.project-note p{margin:0}
+.qa-lifecycle{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.life-step{padding:23px 20px;border-right:1px solid var(--line);position:relative}.life-step:last-child{border-right:0}.life-step>span{color:var(--green);font:700 .62rem "JetBrains Mono",monospace}.life-icon{width:39px;height:39px;display:grid;place-items:center;border:1px solid var(--line);border-radius:10px;margin:19px 0 13px;color:var(--blue);font:700 .85rem "JetBrains Mono",monospace}.life-step h3{margin:0 0 5px}.life-step p{margin:0;color:var(--muted);font-size:.82rem}
+.credentials-grid{align-items:start}.credential-list{display:grid;gap:10px}.credential{display:grid;grid-template-columns:72px 1fr;gap:13px;padding:15px;border:1px solid var(--line);border-radius:11px;background:rgba(255,255,255,.018)}.credential>span{color:var(--green);font:600 .59rem "JetBrains Mono",monospace;padding-top:3px}.credential h3{margin:0;font-size:.9rem}.credential p{margin:3px 0 0;color:var(--muted-2);font-size:.7rem}
+.contact-section{padding-top:85px}.contact-card{display:flex;justify-content:space-between;align-items:end;gap:28px;padding:31px;border:1px solid rgba(98,240,194,.18);border-radius:17px;background:linear-gradient(135deg,rgba(98,240,194,.055),rgba(121,168,255,.045))}.contact-card h2{margin:0;font-size:2.6rem;letter-spacing:-.04em}.contact-copy{max-width:620px;color:#aebdc8;margin:10px 0 0}.contact-actions{display:flex;gap:9px;flex-wrap:wrap}.site-footer{border-top:1px solid var(--line);padding:20px 0;color:#647888;font-size:.7rem}.site-footer .container{display:flex;justify-content:space-between;gap:20px}
+
+.video-section{position:relative}
+.video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-top:26px}
+.video-card{padding:24px;border:1px solid var(--line);border-radius:15px;background:linear-gradient(145deg,rgba(255,255,255,.025),rgba(255,255,255,.012));position:relative;overflow:hidden}
+.video-card:before{content:"";position:absolute;inset:0 auto 0 0;width:2px;background:linear-gradient(var(--green),transparent);opacity:.8}
+.video-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.video-code{display:grid;place-items:center;min-width:44px;height:30px;padding:0 9px;border:1px solid rgba(98,240,194,.2);border-radius:8px;color:var(--green);font:700 .65rem "JetBrains Mono",monospace}
+.video-use{color:#708494;font:600 .61rem "JetBrains Mono",monospace;letter-spacing:.08em}
+.video-card h3{margin:15px 0 8px;font-size:1.16rem}
+.video-card p{color:#9fb0bd;margin:0;font-size:.92rem}
+.video-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:15px}
+.video-tags span{padding:5px 8px;border:1px solid var(--line);border-radius:7px;color:#91a4b2;background:rgba(255,255,255,.018);font:600 .61rem "JetBrains Mono",monospace}
+.video-workflow{display:grid;grid-template-columns:repeat(4,1fr);margin-top:20px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.video-step{padding:17px;border-right:1px solid var(--line);background:rgba(255,255,255,.012)}
+.video-step:last-child{border-right:0}
+.video-step span{display:block;color:var(--green);font:700 .62rem "JetBrains Mono",monospace;margin-bottom:8px}
+.video-step h4{margin:0 0 5px;font-size:.85rem;letter-spacing:.03em}
+.video-step p{margin:0;color:#899dab;font-size:.75rem;line-height:1.5}
+.video-note{margin-top:20px;padding:15px 17px;border:1px solid rgba(98,240,194,.14);border-radius:12px;background:rgba(98,240,194,.028);color:#9fb1bd;font-size:.82rem}
+.video-note strong{color:#e6f4f2}
+.video-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+@media(max-width:1050px){.nav{gap:18px}.strip-grid{grid-template-columns:1fr 1fr}.strip-title{grid-column:1/-1;border-right:0;border-bottom:1px solid var(--line)}.scope-cell:nth-child(3){border-right:0}.tool-wall{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:900px){.hero-grid,.two-col,.section-heading,.credentials-grid{grid-template-columns:1fr}.hero-grid{min-height:auto;padding:22px 0 65px}.hero-copy h1{max-width:780px}.qa-dashboard{margin-top:4px}.stack-grid,.ai-grid,.video-grid{grid-template-columns:1fr}.project-grid{grid-template-columns:1fr}.project-featured{grid-row:auto}.artifact-grid{grid-template-columns:1fr 1fr}.artifact:nth-child(2){border-right:0}.artifact:nth-child(-n+2){border-bottom:1px solid var(--line)}.qa-lifecycle{grid-template-columns:1fr 1fr}.video-workflow{grid-template-columns:1fr 1fr}.video-step:nth-child(2){border-right:0}.video-step:nth-child(1),.video-step:nth-child(2){border-bottom:1px solid var(--line)}.life-step:nth-child(2){border-right:0}.life-step{border-bottom:1px solid var(--line)}.life-step:nth-child(3),.life-step:nth-child(4){border-bottom:0}}
+@media(max-width:720px){.container{width:min(100% - 28px,1160px)}.nav{display:none;position:absolute;left:14px;right:14px;top:66px;padding:10px;background:rgba(7,16,25,.98);border:1px solid var(--line);border-radius:12px;flex-direction:column;align-items:stretch;gap:0}.nav.open{display:flex}.nav a{padding:11px 10px;border-bottom:1px solid var(--line)}.nav a:last-child{border-bottom:0}.nav-status{display:none}.menu-btn{display:block}.hero{padding-top:55px}.hero-copy h1{font-size:clamp(3.2rem,17vw,5.2rem)}.hero-lede{font-size:.95rem}.test-summary{grid-template-columns:1fr 1fr}.pipeline-track{grid-template-columns:1fr 1fr}.strip-grid{grid-template-columns:1fr}.strip-title,.scope-cell,.scope-cell:nth-child(3){border-right:0}.scope-cell{border-bottom:1px solid var(--line)}.scope-cell:last-child{border-bottom:0}.tool-wall{grid-template-columns:1fr 1fr}.timeline-item{grid-template-columns:1fr;gap:6px}.role-line{display:block}.role-line span{display:block;margin-top:5px}.test-matrix{grid-template-columns:1fr}.artifact-grid{grid-template-columns:1fr}.artifact{border-right:0!important;border-bottom:1px solid var(--line)}.artifact:last-child{border-bottom:0}.ai-flow{grid-template-columns:1fr}.ai-step{border-right:0;border-bottom:1px solid var(--line)}.video-workflow{grid-template-columns:1fr}.video-step{border-right:0;border-bottom:1px solid var(--line)}.video-step:last-child{border-bottom:0}.ai-step:last-child{border-bottom:0}.qa-lifecycle{grid-template-columns:1fr}.life-step,.life-step:nth-child(2),.life-step:nth-child(3){border-right:0;border-bottom:1px solid var(--line)}.life-step:last-child{border-bottom:0}.contact-card{align-items:start;flex-direction:column}.contact-card h2{font-size:2.2rem}.site-footer .container{flex-direction:column;gap:6px}}
+.stack-card,.timeline-item,.project-card,.artifact,.life-step{opacity:1;transform:none}.stack-card.reveal-in,.timeline-item.reveal-in,.project-card.reveal-in,.artifact.reveal-in,.life-step.reveal-in{animation:qaReveal .48s ease both}@keyframes qaReveal{from{opacity:.28;transform:translateY(8px)}to{opacity:1;transform:none}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.code-panel{transition:none}.stack-card.reveal-in,.timeline-item.reveal-in,.project-card.reveal-in,.artifact.reveal-in,.life-step.reveal-in{animation:none}}
+
+  </style>
+</head>
+<body>
+  <div class="top-scan" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Carl Anthony Carranza home">
+        <span class="brand-mark">CC</span>
+        <span class="brand-copy"><strong>QA LAB</strong><small>CARL CARRANZA</small></span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#about">Profile</a>
+        <a href="#skills">Test Stack</a>
+        <a href="#ai">AI + QA</a>
+        <a href="#video">AI Video</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">QA Lab</a>
+        <a href="https://github.com/Anthony0019/playwright-qa-automation" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <a href="https://drive.google.com/drive/folders/1vTmeYZRG8ElFL1L3VFNveJ6Iu-1hzrkT?usp=sharing" target="_blank" rel="noreferrer">Portfolio Files ↗</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-status"><span class="status-dot"></span> QA MODE</div>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">☰</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-grid-lines" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="pulse"></span> QA ENGINEER · MANUAL + AUTOMATION · AI VIDEO</div>
+          <p class="terminal-label">/qa-portfolio/home</p>
+          <h1>Find the defect.<br><span>Prove the fix.</span></h1>
+          <p class="hero-lede">I’m Carl Anthony Carranza — a QA Engineer with 5+ years of IT experience, with a parallel focus on AI video editing and prompting. My work combines manual testing, UAT, API checks, SQL validation, Jira defect management, Playwright automation, and AI-assisted creative workflows.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Open QA Lab <span>→</span></a>
+            <a class="btn btn-ghost" href="https://github.com/Anthony0019/playwright-qa-automation" target="_blank" rel="noreferrer">View GitHub <span>↗</span></a>
+            <a class="btn btn-ghost" href="https://drive.google.com/drive/folders/1vTmeYZRG8ElFL1L3VFNveJ6Iu-1hzrkT?usp=sharing" target="_blank" rel="noreferrer">Portfolio Files <span>↗</span></a>
+            <a class="btn btn-ghost" href="#video">AI Video Editing <span>→</span></a>
+            <a class="btn btn-ghost" href="docs/Carl-Anthony-Carranza-CV.pdf" download="Carl_Anthony_YCarranza_CV.pdf">Download CV <span>↓</span></a>
+          </div>
+          <div class="hero-meta">
+            <span>PLAYWRIGHT / JAVASCRIPT</span>
+            <span>POSTMAN / API</span>
+            <span>JIRA / SQL</span>
+            <span>AI-ASSISTED QA</span>
+            <span>AI VIDEO / EDITING</span>
+          </div>
+        </div>
+
+        <div class="qa-dashboard" aria-label="QA portfolio dashboard">
+          <div class="dash-topbar">
+            <div class="terminal-controls"><i></i><i></i><i></i></div>
+            <div class="dash-path">test-runner <span>/</span> portfolio</div>
+            <div class="dash-live"><span class="status-dot"></span> READY</div>
+          </div>
+
+          <div class="dash-body">
+            <div class="suite-head">
+              <div>
+                <p class="mono-kicker">TEST EXECUTION DASHBOARD</p>
+                <h2>QA Control Center</h2>
+              </div>
+              <div class="run-badge"><span>●</span> automation-ready</div>
+            </div>
+
+            <div class="test-summary">
+              <div class="summary-card"><span>UI</span><strong>Playwright</strong><small>Web automation</small></div>
+              <div class="summary-card"><span>API</span><strong>Postman</strong><small>Request validation</small></div>
+              <div class="summary-card"><span>DATA</span><strong>SQL</strong><small>Integrity checks</small></div>
+              <div class="summary-card"><span>UAT</span><strong>Manual QA</strong><small>Business flows</small></div>
+            </div>
+
+            <div class="pipeline">
+              <div class="pipeline-label"><span>QA PIPELINE</span><span>coverage mindset</span></div>
+              <div class="pipeline-track">
+                <div class="pipe-step active"><b>01</b><span>Requirements</span></div>
+                <div class="pipe-step active"><b>02</b><span>Test Cases</span></div>
+                <div class="pipe-step active"><b>03</b><span>Execute</span></div>
+                <div class="pipe-step"><b>04</b><span>Report</span></div>
+              </div>
+            </div>
+
+            <div class="console">
+              <div class="console-head"><span>playwright.config.js</span><span>HTML REPORTER</span></div>
+              <pre><code><span class="dim">projects</span>: [
+  <span class="bracket">{</span> name: <span class="str">'chromium'</span> <span class="bracket">}</span>,
+  <span class="bracket">{</span> name: <span class="str">'firefox'</span>  <span class="bracket">}</span>,
+  <span class="bracket">{</span> name: <span class="str">'webkit'</span>   <span class="bracket">}</span>
+]</code></pre>
+              <div class="console-foot"><span>↳ cross-browser suite</span><span>trace / screenshot ready</span></div>
+            </div>
+          </div>
+
+          <div class="dash-footer"><span><i class="check"></i> Test design</span><span><i class="check"></i> Defect tracking</span><span><i class="check"></i> Fix verification</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="qa-strip">
+      <div class="container strip-grid">
+        <div class="strip-title"><span class="mono-kicker">TEST SCOPE</span><strong>Manual + Automation</strong></div>
+        <div class="scope-cell"><span class="scope-icon">01</span><div><b>Manual QA</b><small>test plans · cases · UAT</small></div></div>
+        <div class="scope-cell"><span class="scope-icon">02</span><div><b>Automation</b><small>Playwright · JavaScript · POM</small></div></div>
+        <div class="scope-cell"><span class="scope-icon">03</span><div><b>API + Data</b><small>Postman · SQL validation</small></div></div>
+        <div class="scope-cell"><span class="scope-icon">04</span><div><b>Defects</b><small>Jira · evidence · verification</small></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container two-col">
+        <div>
+          <p class="section-kicker">01 / PROFILE</p>
+          <h2>Think like a tester. Communicate like a project partner.</h2>
+        </div>
+        <div class="section-body">
+          <p>My background combines hands-on testing with project coordination. I’ve created and executed manual test plans and cases, led UAT sessions, managed defects in Jira, performed API validation with Postman, and used SQL-based checks to validate data.</p>
+          <p>More recently, I’ve been working with Playwright in JavaScript for functional UI automation, including Page Object Model patterns and cross-browser execution with Chromium, Firefox, and WebKit.</p>
+          <div class="mini-callout"><span>QA mindset</span><b>Requirement → scenario → test → evidence → defect → retest → closure.</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="section-kicker">02 / TEST STACK</p><h2>Tools behind the test.</h2></div>
+          <p>The portfolio visualizes the QA activities and tools documented in my CV and practice work.</p>
+        </div>
+        <div class="stack-grid">
+          <article class="stack-card stack-featured">
+            <div class="stack-top"><span class="tool-code">PW</span><span class="tool-state">AUTOMATION</span></div>
+            <h3>Playwright Automation</h3>
+            <p>JavaScript-based UI automation with Playwright Test Runner, Codegen, VS Code extension, Page Object Model, and cross-browser projects.</p>
+            <div class="chips"><span>Playwright</span><span>JavaScript</span><span>POM</span><span>Chromium</span><span>Firefox</span><span>WebKit</span></div>
+          </article>
+          <article class="stack-card">
+            <div class="stack-top"><span class="tool-code">QA</span><span class="tool-state">MANUAL</span></div>
+            <h3>Manual QA & UAT</h3>
+            <p>Test plan and test case creation, end-to-end execution, UAT coordination, defect documentation, and release readiness validation.</p>
+            <div class="chips"><span>UAT</span><span>Test Cases</span><span>Defects</span><span>Jira</span></div>
+          </article>
+          <article class="stack-card">
+            <div class="stack-top"><span class="tool-code">API</span><span class="tool-state">VALIDATE</span></div>
+            <h3>API & Data Validation</h3>
+            <p>Basic API testing with Postman and Playwright request fixtures, plus SQL-based validation and data integrity checks.</p>
+            <div class="chips"><span>Postman</span><span>REST</span><span>HTTP</span><span>SQL</span></div>
+          </article>
+          <article class="stack-card">
+            <div class="stack-top"><span class="tool-code">SDLC</span><span class="tool-state">COLLABORATE</span></div>
+            <h3>Delivery & Collaboration</h3>
+            <p>Jira/Trello defect management, BRD-to-test translation, Agile/Scrum participation, project documentation, and cross-functional coordination.</p>
+            <div class="chips"><span>Jira</span><span>Trello</span><span>Agile</span><span>BRD</span></div>
+          </article>
+        </div>
+
+        <div class="tool-wall" aria-label="QA tools">
+          <div><span class="tool-dot"></span>Playwright</div><div><span class="tool-dot"></span>JavaScript</div><div><span class="tool-dot"></span>Postman</div><div><span class="tool-dot"></span>Jira</div><div><span class="tool-dot"></span>Trello</div><div><span class="tool-dot"></span>SQL</div><div><span class="tool-dot"></span>Git / GitHub</div><div><span class="tool-dot"></span>HTML5</div><div><span class="tool-dot"></span>ChatGPT</div><div><span class="tool-dot"></span>Codex Tools</div><div><span class="tool-dot"></span>Gemini</div><div><span class="tool-dot"></span>Grok AI</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="ai">
+      <div class="container">
+        <div class="section-heading"><div><p class="section-kicker">03 / AI + QA</p><h2>AI-assisted testing workflow.</h2></div><p>AI tools are part of my working toolkit for documentation, automation scripting, API work, and test analysis — with actual test execution and validation still done through the QA workflow.</p></div>
+
+        <div class="ai-grid">
+          <article class="ai-card">
+            <div class="ai-top"><span class="ai-code">GPT</span><span class="ai-use">DOCUMENTATION</span></div>
+            <h3>ChatGPT</h3>
+            <p>Used as a QA documentation assistant for drafting test scenarios, test cases, defect descriptions, status updates, workflow notes, and requirement-to-test breakdowns.</p>
+            <div class="ai-tags"><span>Test Cases</span><span>Bug Reports</span><span>QA Docs</span><span>Test Scenarios</span></div>
+          </article>
+
+          <article class="ai-card">
+            <div class="ai-top"><span class="ai-code">CODEX</span><span class="ai-use">AUTOMATION</span></div>
+            <h3>Codex Tools</h3>
+            <p>Used to support Playwright automation work, including scripting, locator ideas, Page Object Model structure, refactoring, debugging, and turning test steps into maintainable automation code.</p>
+            <div class="ai-tags"><span>Playwright</span><span>JavaScript</span><span>POM</span><span>Debugging</span></div>
+          </article>
+
+          <article class="ai-card">
+            <div class="ai-top"><span class="ai-code">GEM</span><span class="ai-use">API + SCRIPTING</span></div>
+            <h3>Gemini</h3>
+            <p>Used as an assistant for API request scripting, payload examples, test-data preparation, scripting questions, and troubleshooting during API and automation practice.</p>
+            <div class="ai-tags"><span>API Requests</span><span>JSON</span><span>Test Data</span><span>Scripting</span></div>
+          </article>
+
+          <article class="ai-card">
+            <div class="ai-top"><span class="ai-code">GROK</span><span class="ai-use">TEST ANALYSIS</span></div>
+            <h3>Grok AI</h3>
+            <p>Used for QA problem-solving support, edge-case brainstorming, alternative scripting approaches, and technical discussion while developing and studying automation tests.</p>
+            <div class="ai-tags"><span>Edge Cases</span><span>Test Ideas</span><span>Scripting</span><span>Debugging</span></div>
+          </article>
+        </div>
+
+        <div class="ai-flow" aria-label="AI-assisted QA workflow">
+          <div class="ai-step"><span>01</span><h4>DOCUMENT</h4><p>Turn requirements and workflows into clearer QA notes and test scenarios.</p></div>
+          <div class="ai-step"><span>02</span><h4>SCRIPT</h4><p>Use AI assistance to draft or refine automation and API request code.</p></div>
+          <div class="ai-step"><span>03</span><h4>REVIEW</h4><p>Check selectors, assertions, payloads, logic, and edge cases before execution.</p></div>
+          <div class="ai-step"><span>04</span><h4>EXECUTE</h4><p>Run the actual manual or automated test, inspect evidence, and verify the result.</p></div>
+        </div>
+
+        <div class="ai-note"><strong>QA principle:</strong> AI is used as an assistant for speed and problem solving; test results, defects, and fixes are still reviewed and verified through the actual application, API response, or test run.</div>
+      </div>
+    </section>
+
+    <section class="section video-section" id="video">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="section-kicker">04 / AI VIDEO</p><h2>AI video editing, alongside QA.</h2></div>
+          <p>A second creative track focused on AI-assisted video production, prompt design, editing, and short-form portfolio work.</p>
+        </div>
+
+        <div class="video-grid">
+          <article class="video-card">
+            <div class="video-top"><span class="video-code">FLOW</span><span class="video-use">GENERATION</span></div>
+            <h3>Google Flow</h3>
+            <p>Used for AI video generation and visual scene experimentation, with prompt-driven direction for shots, motion, composition, and consistent creative intent.</p>
+            <div class="video-tags"><span>Prompt Design</span><span>Scene Generation</span><span>Visual Direction</span></div>
+          </article>
+          <article class="video-card">
+            <div class="video-top"><span class="video-code">CAP</span><span class="video-use">EDITING</span></div>
+            <h3>CapCut</h3>
+            <p>Used for assembling generated footage, pacing edits, transitions, captions, sound, and final social-ready presentation.</p>
+            <div class="video-tags"><span>Editing</span><span>Captions</span><span>Pacing</span><span>Short-form</span></div>
+          </article>
+          <article class="video-card">
+            <div class="video-top"><span class="video-code">SD</span><span class="video-use">AI VIDEO</span></div>
+            <h3>Seedance</h3>
+            <p>Used for AI-generated motion and scene concepts, refining prompts and visual direction to produce clips that can be edited into a finished sequence.</p>
+            <div class="video-tags"><span>AI Generation</span><span>Motion</span><span>Prompt Iteration</span></div>
+          </article>
+          <article class="video-card">
+            <div class="video-top"><span class="video-code">GPT</span><span class="video-use">PROMPTING</span></div>
+            <h3>AI Prompting & Creative Planning</h3>
+            <p>Uses ChatGPT and Gemini to draft visual prompts, shot ideas, scripts, scene descriptions, and iteration plans before generating or editing the final video.</p>
+            <div class="video-tags"><span>ChatGPT</span><span>Gemini</span><span>Shot Lists</span><span>Prompt Refinement</span></div>
+          </article>
+        </div>
+
+        <div class="video-workflow" aria-label="AI video editing workflow">
+          <div class="video-step"><span>01</span><h4>CONCEPT</h4><p>Define the idea, audience, style, and visual direction.</p></div>
+          <div class="video-step"><span>02</span><h4>PROMPT</h4><p>Write and iterate prompts for scenes, motion, framing, and continuity.</p></div>
+          <div class="video-step"><span>03</span><h4>GENERATE</h4><p>Create clips with AI video tools and review the results.</p></div>
+          <div class="video-step"><span>04</span><h4>EDIT</h4><p>Assemble the strongest clips, add captions/audio, and polish the final cut.</p></div>
+        </div>
+
+        <div class="video-note"><strong>Creative workflow:</strong> AI generation is combined with human review and editing. The goal is not just to generate a clip, but to turn prompts and raw outputs into a coherent finished video.</div>
+        <div class="video-actions">
+          <a class="btn btn-primary" href="https://drive.google.com/drive/folders/1vTmeYZRG8ElFL1L3VFNveJ6Iu-1hzrkT?usp=sharing" target="_blank" rel="noreferrer">View AI Video Portfolio ↗</a>
+          <a class="btn btn-ghost" href="#ai">See AI + QA Workflow →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-heading"><div><p class="section-kicker">05 / EXPERIENCE</p><h2>QA experience, across the SDLC.</h2></div><p>Testing-focused highlights from the roles listed in my CV.</p></div>
+        <div class="timeline">
+          <article class="timeline-item"><div class="timeline-date">05/2026 — Present</div><div><div class="role-line"><h3>Jr. Project Manager</h3><span>RED CORE SOLUTIONS</span></div><p class="muted">Mandaluyong City</p><div class="evidence"><span>BRD → TEST</span><span>PLAYWRIGHT</span><span>UAT</span><span>JIRA</span></div><ul><li>Translated requirements and BRDs into test scenarios and test cases.</li><li>Integrated Playwright automation for cross-browser functional UI testing alongside manual UAT.</li><li>Led UAT sessions, managed Jira defects, and coordinated with development and business stakeholders.</li></ul></div></article>
+          <article class="timeline-item"><div class="timeline-date">08/2025 — 02/2026</div><div><div class="role-line"><h3>Jr. Project Manager</h3><span>GREAT DEALS E-COMMERCE</span></div><div class="evidence"><span>BRD → TEST</span><span>UAT</span><span>JIRA</span></div><ul><li>Created BRDs and translated business requirements into detailed test scenarios and cases.</li><li>Executed and coordinated manual UAT; tracked defects and testing timelines in Jira.</li><li>Supported project planning, documentation, milestones, and cross-functional communication.</li></ul></div></article>
+          <article class="timeline-item"><div class="timeline-date">05/2024 — 06/2025</div><div><div class="role-line"><h3>Business Analyst / QA Auditing</h3><span>WE SUPPORT INC. / PRU LIFE UK</span></div><div class="evidence"><span>UAT</span><span>AUDIT</span><span>DATA INTEGRITY</span></div><ul><li>Conducted UAT and manual testing of business processes and reported execution status.</li><li>Audited transactions, claims, and data for policy compliance and integrity.</li><li>Documented findings, corrective actions, and re-audit results.</li></ul></div></article>
+          <article class="timeline-item"><div class="timeline-date">10/2021 — 02/2024</div><div><div class="role-line"><h3>IT QA Tester</h3><span>ETHOS AND INNOVATIONS</span></div><div class="evidence"><span>MANUAL QA</span><span>API</span><span>L1/L2</span></div><ul><li>Created and executed manual test plans and test cases for client projects.</li><li>Performed basic API testing and collaborated with BAs/developers on defects and releases.</li><li>Provided L1/L2 system support and client-facing technical presentations.</li></ul></div></article>
+          <article class="timeline-item"><div class="timeline-date">02/2021 — 09/2021</div><div><div class="role-line"><h3>QA Tester (Technical QA Specialist)</h3><span>SSI SAGESOFT SOLUTIONS</span></div><div class="evidence"><span>TEST CASES</span><span>JIRA</span><span>TECHNICAL QA</span></div><ul><li>Created and executed detailed manual test plans and cases.</li><li>Managed Jira defects and daily testing status updates.</li><li>Collaborated with development and business teams to define test scenarios.</li></ul></div></article>
+          <article class="timeline-item"><div class="timeline-date">02/2020 — 10/2020</div><div><div class="role-line"><h3>QA Tester (Jr. Tester)</h3><span>TCOE GLOBE TELECOM / WSI</span></div><div class="evidence"><span>MANUAL QA</span><span>POSTMAN</span><span>AGILE</span></div><ul><li>Executed manual test cases, analyzed defects, and worked with developers on fixes.</li><li>Performed basic API validation with Postman.</li><li>Participated in Agile/Scrum ceremonies and mobile application testing.</li></ul></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="projects">
+      <div class="container">
+        <div class="section-heading"><div><p class="section-kicker">06 / QA LAB</p><h2>Test suites & automation practice.</h2></div><p>Built from the Playwright files you provided. Sensitive credentials are intentionally excluded.</p></div>
+
+        <div class="project-grid">
+          <article class="project-card project-featured">
+            <div class="project-top"><span class="project-label">ELECTRON · PLAYWRIGHT</span><span class="project-index">SUITE 01</span></div>
+            <h3>Cash App — Polar Data Flow</h3>
+            <p class="project-summary">Playwright automation for an Electron application using Page Object Model. The test logs in, opens Polar Data, filters by date, triggers refresh/re-import behavior, and captures a failure screenshot for debugging.</p>
+            <div class="test-matrix">
+              <div><span>FLOW</span><b>Login → Polar Data</b></div>
+              <div><span>TEST DESIGN</span><b>Page Object Model</b></div>
+              <div><span>EVIDENCE</span><b>Failure screenshot</b></div>
+              <div><span>REPORTING</span><b>HTML reporter</b></div>
+            </div>
+            <div class="project-tags"><span>POM</span><span>Electron</span><span>Playwright</span><span>Screenshot evidence</span></div>
+            <div class="project-actions"><a class="btn btn-ghost" href="https://github.com/Anthony0019/playwright-qa-automation/tree/main/Cash%20Test" target="_blank" rel="noreferrer">View on GitHub ↗</a></div>
+            <button class="code-toggle" data-target="code1" aria-expanded="false">Inspect approach <span>⌄</span></button>
+            <pre class="code-panel" id="code1"><code><span class="kw">const</span> loginPage = <span class="kw">new</span> LoginPage(window);
+<span class="kw">const</span> polarDataPage = <span class="kw">new</span> PolarDataPage(window);
+
+<span class="kw">await</span> loginPage.handleLogin(TEST_EMAIL, TEST_PASSWORD);
+<span class="kw">await</span> polarDataPage.navigateTo();
+<span class="kw">await</span> polarDataPage.filterByDate(<span class="str">'31-Aug-2025'</span>);
+<span class="kw">await</span> polarDataPage.triggerReimportAndRefresh();</code></pre>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top"><span class="project-label">UI · PLAYWRIGHT</span><span class="project-index">SUITE 02</span></div>
+            <h3>Playwright UI Fundamentals</h3>
+            <p class="project-summary">Practice tests focused on locators, form filling, assertions, waiting for elements, extracting text from collections, and basic browser context usage.</p>
+            <div class="test-row"><span class="test-state">SCENARIO</span><b>Login validation</b></div>
+            <div class="test-row"><span class="test-state">ASSERT</span><b>Alert message contains expected text</b></div>
+            <div class="test-row"><span class="test-state">LOCATOR</span><b>Collection + first element</b></div>
+            <div class="project-actions"><a class="btn btn-ghost" href="https://github.com/Anthony0019/playwright-qa-automation/tree/main/PlaywrightAutomation" target="_blank" rel="noreferrer">View on GitHub ↗</a></div>
+            <button class="code-toggle" data-target="code2" aria-expanded="false">Inspect approach <span>⌄</span></button>
+            <pre class="code-panel" id="code2"><code><span class="kw">await</span> page.goto(<span class="str">'https://…/loginpagePractise/'</span>);
+<span class="kw">await</span> userName.fill(<span class="str">'test-user'</span>);
+<span class="kw">await</span> signIn.click();
+<span class="kw">await</span> expect(page.locator(<span class="str">'.alert-danger'</span>))
+  .toContainText(<span class="str">'Incorrect'</span>);
+<span class="kw">await</span> page.locator(<span class="str">'.card-body a'</span>).first().waitFor();</code></pre>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top"><span class="project-label">API + UI · PLAYWRIGHT</span><span class="project-index">SUITE 03</span></div>
+            <h3>Multisys Automation Practice</h3>
+            <p class="project-summary">A broader set covering positive/negative login scenarios, REST API checks, checkbox state, dynamic content, privacy validation, and Page Object Model.</p>
+            <div class="test-row"><span class="test-state">UI</span><b>Login success / invalid / empty credentials</b></div>
+            <div class="test-row"><span class="test-state">API</span><b>GET single / all users + POST create user</b></div>
+            <div class="test-row"><span class="test-state">DYNAMIC</span><b>Content change after refresh</b></div>
+            <div class="project-actions"><a class="btn btn-ghost" href="https://github.com/Anthony0019/playwright-qa-automation/tree/main/Multisys%20Automation" target="_blank" rel="noreferrer">View on GitHub ↗</a></div>
+            <button class="code-toggle" data-target="code3" aria-expanded="false">Inspect approach <span>⌄</span></button>
+            <pre class="code-panel" id="code3"><code><span class="kw">const</span> response = <span class="kw">await</span> request.get(<span class="str">'https://…/users'</span>);
+expect(response.status()).toBe(<span class="num">200</span>);
+
+<span class="kw">const</span> users = <span class="kw">await</span> response.json();
+expect(Array.isArray(users)).toBe(<span class="bool">true</span>);
+expect(users[<span class="num">0</span>]).toHaveProperty(<span class="str">'id'</span>);</code></pre>
+          </article>
+        </div>
+
+        <div class="artifact-board">
+          <div class="artifact-head"><span class="mono-kicker">QA ARTIFACTS</span><span>from practice folders</span></div>
+          <div class="artifact-grid">
+            <div class="artifact"><span class="artifact-icon">✓</span><div><b>Test Specs</b><small>UI, API, login, checkbox, dynamic content</small></div></div>
+            <div class="artifact"><span class="artifact-icon">⌘</span><div><b>Page Objects</b><small>Reusable page classes for automation flows</small></div></div>
+            <div class="artifact"><span class="artifact-icon">↗</span><div><b>CI Workflow</b><small>GitHub workflow configuration present</small></div></div>
+            <div class="artifact"><span class="artifact-icon">▣</span><div><b>Test Reports</b><small>HTML reporter and failure evidence</small></div></div>
+          </div>
+        </div>
+        <div class="project-note"><span>↳</span><p>The portfolio summarizes testing approaches from the uploaded project folders rather than exposing raw credentials or proprietary application details.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="workflow">
+      <div class="container">
+        <div class="section-heading"><div><p class="section-kicker">07 / QA LIFECYCLE</p><h2>From requirement to verified fix.</h2></div><p>A practical testing flow reflected in the work shown across the CV and automation practice.</p></div>
+        <div class="qa-lifecycle">
+          <div class="life-step"><span>01</span><div class="life-icon">⌕</div><h3>Understand</h3><p>Read the requirement or business workflow and identify expected behavior.</p></div>
+          <div class="life-step"><span>02</span><div class="life-icon">▤</div><h3>Design</h3><p>Create scenarios, cases, test data, and automation candidates.</p></div>
+          <div class="life-step"><span>03</span><div class="life-icon">▶</div><h3>Execute</h3><p>Run manual UAT or automated checks and capture evidence.</p></div>
+          <div class="life-step"><span>04</span><div class="life-icon">!</div><h3>Report</h3><p>Log defects, communicate status, and verify fixes before closure.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="credentials">
+      <div class="container credentials-grid">
+        <div><p class="section-kicker">08 / CREDENTIALS</p><h2>Education & certifications</h2></div>
+        <div class="credential-list">
+          <div class="credential"><span>BSIT</span><div><h3>STI College</h3><p>01/2015 — 01/2019 · Ortigas Cainta</p></div></div>
+          <div class="credential"><span>CERT</span><div><h3>Acronis Cyberfit Cloud Tech Associate Certified</h3><p>Certification listed in CV</p></div></div>
+          <div class="credential"><span>FOUND</span><div><h3>Acronis Cyberfit Cloud Tech Foundation Certified</h3><p>Certification listed in CV</p></div></div>
+          <div class="credential"><span>PM</span><div><h3>Project Management and Leadership 101</h3><p>Training</p></div></div>
+          <div class="credential"><span>AI</span><div><h3>AI for CX and Tech Workshop Training</h3><p>Workshop training</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-card">
+        <div>
+          <p class="section-kicker">09 / CONTACT</p>
+          <h2>Ready for the next test case.</h2>
+          <p class="contact-copy">For QA Engineer, QA Automation, Manual QA, or testing-focused opportunities, you can reach me through email or LinkedIn.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:carranza.anthony0019@gmail.com">Email Carl</a>
+          <a class="btn btn-ghost" href="https://github.com/Anthony0019/playwright-qa-automation" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a class="btn btn-ghost" href="https://drive.google.com/drive/folders/1vTmeYZRG8ElFL1L3VFNveJ6Iu-1hzrkT?usp=sharing" target="_blank" rel="noreferrer">Portfolio Files ↗</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/carl-anthony-carranza-39198a3a5" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><span>© <span id="year"></span> Carl Anthony Carranza</span><span>QA Engineer · Manual + Automation · AI Video Editing · <a href="https://github.com/Anthony0019/playwright-qa-automation" target="_blank" rel="noreferrer">GitHub ↗</a></span></div></footer>
+  <script>
+const menuBtn = document.getElementById('menuBtn');
+const nav = document.getElementById('nav');
+menuBtn?.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', String(open));
+});
+
+document.querySelectorAll('.nav a').forEach((link) => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  });
+});
+
+document.querySelectorAll('.code-toggle').forEach((button) => {
+  button.addEventListener('click', () => {
+    const panel = document.getElementById(button.dataset.target);
+    const open = panel.classList.toggle('open');
+    button.setAttribute('aria-expanded', String(open));
+    button.innerHTML = open ? 'Hide approach <span>⌃</span>' : 'View approach <span>⌄</span>';
+  });
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+
+const revealItems = document.querySelectorAll('.stack-card, .timeline-item, .project-card, .artifact, .life-step');
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  revealItems.forEach((el) => observer.observe(el));
+}
+
+  </script>
+</body>
+</html>

@@ -1,38 +1,27 @@
-# QA Automation Portfolio
+# Carl Anthony Carranza — QA Portfolio
 
-Hi, I'm Carl Anthony Carranza, a QA Engineer focused on Manual
-Testing and QA Automation.
+QA-focused personal portfolio site for Carl Anthony Carranza.
 
-## QA Focus
+## Focus
+- Manual QA and UAT
+- Playwright + JavaScript automation
+- Page Object Model and cross-browser testing
+- API testing with Postman and request scripting
+- SQL/data validation
+- Jira/Trello defect management
+- AI-assisted QA workflows using ChatGPT, Codex Tools, Gemini, and Grok AI
 
-- Manual QA Testing
-- UI Automation
-- API Testing
-- UAT
-- Test Case Design
-- Defect Management
-- Page Object Model
-- Cross-Browser Testing
+## AI-assisted QA section
+The site documents the user's stated use of AI tools for:
+- QA documentation and test scenario/test case drafting
+- Playwright automation scripting, debugging, and refactoring support
+- API request scripting, payload/test-data preparation, and API testing support
+- Edge-case brainstorming and technical problem solving
 
-## Tools
+The site frames AI as an assistant; actual testing and verification remain part of the QA workflow.
 
-- Playwright
-- JavaScript
-- Postman
-- Jira
-- GitHub
-- SQL
-- AI-assisted QA tools
+## CV download
+`docs/Carl-Anthony-Carranza-CV.pdf` is linked from the hero's **Download CV** button using the browser download attribute.
 
-## Projects
-
-### Multisys Automation
-Playwright automation project covering UI validation,
-login scenarios, dynamic content, checkboxes, and API testing.
-
-[View Project](./Multisys%20Automation/)
-
-### Playwright Automation
-Playwright practice and automation test scenarios.
-
-[View Project](./PlaywrightAutomation/)
+## Run locally
+Open `index.html` in a modern browser.
